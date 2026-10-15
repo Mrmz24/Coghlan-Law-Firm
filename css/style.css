@@ -1,0 +1,1260 @@
+
+/* =========================================
+   COGHLAN LAW FIRM
+   Premium black, gold and cream theme
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --ink: #10100f;
+    --ink-light: #1b1915;
+    --gold: #c99d50;
+    --gold-light: #e4c17e;
+    --cream: #f6efe3;
+    --cream-dark: #eee1cc;
+    --text: #292621;
+    --muted: #6d6962;
+    --border-gold: rgba(176, 128, 54, 0.34);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.65;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.15;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1320px;
+}
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+.site-nav {
+    background: rgba(15, 15, 14, 0.98);
+    border-bottom: 2px solid var(--gold);
+    z-index: 1000;
+}
+
+.site-nav .container {
+    min-height: 80px;
+}
+
+.brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.brand-emblem {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border: 1px solid var(--gold-light);
+    border-radius: 2px;
+    color: var(--gold-light);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 43px;
+    line-height: 1;
+    text-shadow: 0 2px 8px #000;
+    box-shadow: inset 0 0 15px #c99d5015;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-size: 25px;
+    line-height: 1.05;
+}
+
+.brand-name small {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 12px;
+    color: var(--gold-light);
+    letter-spacing: 6px;
+    margin-top: 6px;
+}
+
+.site-nav .navbar-nav {
+    gap: 9px;
+}
+
+.site-nav .nav-link {
+    position: relative;
+    color: #f8f3ea !important;
+    font-size: 13px;
+    padding: 13px 12px !important;
+    transition: color 0.25s ease;
+}
+
+.site-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: 5px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.25s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    color: var(--gold-light) !important;
+}
+
+.site-nav .nav-link:hover::after,
+.site-nav .nav-link.active::after {
+    width: calc(100% - 24px);
+}
+
+.site-nav .navbar-toggler {
+    border: 1px solid var(--gold);
+}
+
+.site-nav .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px #c99d5033;
+}
+
+/* =========================================
+   GOLD BUTTONS
+========================================= */
+
+.btn {
+    border-radius: 3px;
+    padding: 12px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #e2bd77, #c29343);
+    border: 1px solid #d5aa60;
+    color: #15120d;
+    box-shadow:
+        0 5px 0 #8c672e,
+        0 10px 22px #0002;
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, #f0d08e, #d4a34d);
+    border-color: var(--gold-light);
+    color: #111;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 0 #8c672e,
+        0 14px 24px #0003;
+}
+
+.btn-gold:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #8c672e;
+}
+
+.btn-outline-gold {
+    background: rgba(17, 17, 17, 0.65);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+}
+
+.btn-outline-gold:hover {
+    background: var(--gold);
+    color: #17130c;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   HOMEPAGE HERO SECTION
+========================================= */
+
+.hero-section {
+    min-height: 370px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: #fff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 12, 11, 0.98) 0%,
+            rgba(12, 12, 11, 0.88) 36%,
+            rgba(12, 12, 11, 0.28) 72%,
+            rgba(12, 12, 11, 0.58) 100%
+        ),
+        url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=2000&q=85')
+        center 53% / cover no-repeat;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            135deg,
+            transparent 0 8%,
+            rgba(201, 157, 80, 0.18) 8.1%,
+            transparent 8.6% 90%,
+            rgba(201, 157, 80, 0.22) 90.1%,
+            transparent 90.7%
+        );
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 370px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.hero-copy {
+    max-width: 660px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #bd832d;
+    margin: 0 0 13px;
+}
+
+.hero-section .eyebrow,
+.page-hero .eyebrow {
+    color: var(--gold-light);
+}
+
+.hero-section h1 {
+    font-size: clamp(38px, 4.2vw, 60px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin: 0 0 13px;
+    color: #fff;
+}
+
+.hero-section h1 span,
+.page-hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero-lead {
+    font-size: 16px;
+    line-height: 1.55;
+    color: #f0ece6;
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.hero-side-note {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 14px 0;
+    color: var(--gold-light);
+    font-size: 12px;
+    letter-spacing: 3px;
+    line-height: 2.2;
+}
+
+/* =========================================
+   SHARED SECTION STYLING
+========================================= */
+
+.section-pad {
+    padding: 62px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 27px;
+    max-width: 740px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 3vw, 43px);
+    font-weight: 700;
+    color: #151412;
+    margin: 0 0 7px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* =========================================
+   PRACTICE AREA CARDS
+========================================= */
+
+.practice-section {
+    background:
+        radial-gradient(
+            ellipse at top,
+            #fff9ed 0%,
+            var(--cream) 65%,
+            #eee0c9 100%
+        );
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.practice-card {
+    min-height: 250px;
+    text-align: center;
+    border: 1px solid var(--border-gold);
+    border-radius: 5px;
+    padding: 17px 15px 14px;
+    background: linear-gradient(145deg, #fffaf1, #f2e7d5);
+    box-shadow: 0 9px 20px #4d361312;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-card:hover {
+    transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 0 20px 32px #35251522;
+}
+
+.service-icon {
+    height: 56px;
+    display: grid;
+    place-items: center;
+    font-size: 42px;
+    line-height: 1;
+    color: #b37a2e;
+    text-shadow:
+        1px 3px 0 #f0d7a5,
+        2px 5px 9px #4b321c45;
+}
+
+.card-number {
+    display: block;
+    color: #a86d22;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 3px 0 4px;
+}
+
+.practice-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    min-height: 38px;
+    margin: 0 0 7px;
+    color: #201b15;
+}
+
+.practice-card p {
+    font-size: 12px;
+    color: #69635b;
+    line-height: 1.55;
+    min-height: 54px;
+    margin-bottom: 10px;
+}
+
+.practice-card > a,
+.detail-card > a,
+.insight-card > a {
+    font-size: 12px;
+    color: #9a5a0c;
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTACT CALL-TO-ACTION STRIP
+========================================= */
+
+.conversation-band {
+    background: linear-gradient(90deg, #111, #171512 65%, #282015);
+    color: #fff;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+}
+
+.conversation-inner {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.conversation-symbol {
+    font-size: 36px;
+    color: var(--gold-light);
+}
+
+.conversation-inner .eyebrow {
+    margin-bottom: 2px;
+}
+
+.conversation-inner h2 {
+    font-size: 23px;
+    margin: 0 0 3px;
+}
+
+.conversation-inner p:last-child {
+    font-size: 13px;
+    color: #ddd6ca;
+    margin: 0;
+}
+
+.conversation-inner .btn {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+/* =========================================
+   INNER PAGE HERO BANNERS
+========================================= */
+
+.page-hero {
+    background:
+        radial-gradient(ellipse at 82% 35%, #3a2c18 0%, transparent 42%),
+        linear-gradient(115deg, #111 0%, #1d1a15 100%);
+    color: #fff;
+    padding: 66px 0 62px;
+    border-bottom: 2px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid #c99d5033;
+    transform: rotate(45deg);
+    right: 7%;
+    top: -120px;
+    box-shadow:
+        0 0 0 25px #c99d5008,
+        0 0 0 50px #c99d5005;
+    pointer-events: none;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero h1 {
+    font-size: clamp(38px, 4vw, 56px);
+    max-width: 900px;
+    margin: 0 0 12px;
+}
+
+.page-hero p:not(.eyebrow) {
+    max-width: 690px;
+    color: #e1dbd0;
+    margin: 0;
+}
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.split-layout h2,
+.form-layout h2,
+.contact-details h2 {
+    font-size: 36px;
+    margin-bottom: 17px;
+}
+
+.split-layout p {
+    color: #5e5951;
+}
+
+.feature-panel {
+    min-height: 290px;
+    padding: 40px;
+    background: linear-gradient(145deg, #1a1814, #090909);
+    color: #fff;
+    border: 1px solid var(--gold);
+    box-shadow: 14px 14px 0 #d5b06d33;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-mark {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 90px;
+    color: var(--gold-light);
+    line-height: 1;
+}
+
+.feature-panel h3 {
+    font-size: 27px;
+}
+
+.feature-panel p {
+    color: #ded6c9;
+}
+
+.values-section {
+    background: #eee2d0;
+}
+
+.three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.info-card,
+.team-card,
+.insight-card {
+    background: #fff9ef;
+    border: 1px solid var(--border-gold);
+    padding: 28px;
+    box-shadow: 0 10px 24px #3223120b;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-card:hover,
+.team-card:hover,
+.insight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px #3223121c;
+}
+
+.info-card > span {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #b77b2a;
+    font-size: 24px;
+}
+
+.info-card h3,
+.team-card h3 {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+.info-card p,
+.team-card p:not(.eyebrow),
+.insight-card p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   PRACTICE AREAS PAGE
+========================================= */
+
+.practice-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.detail-card {
+    padding: 30px;
+    background: #fff9ef;
+    border: 1px solid var(--border-gold);
+    box-shadow: 0 10px 24px #3223120b;
+    scroll-margin-top: 100px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px #3223121c;
+}
+
+.detail-card h2,
+.insight-card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.detail-card p {
+    color: var(--muted);
+    font-size: 14px;
+    min-height: 70px;
+}
+
+/* =========================================
+   TEAM PAGE
+========================================= */
+
+.team-avatar {
+    width: 100%;
+    height: 135px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, #29231a, #0d0d0d);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font: 70px 'Playfair Display', Georgia, serif;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   LEGAL INSIGHTS PAGE
+========================================= */
+
+.insight-card {
+    min-height: 270px;
+}
+
+.insight-card h2 {
+    font-size: 22px;
+}
+
+/* =========================================
+   FAQ PAGE
+========================================= */
+
+.faq-list {
+    max-width: 900px;
+}
+
+.faq-list details {
+    background: #fff9ef;
+    border: 1px solid var(--border-gold);
+    margin-bottom: 12px;
+    padding: 19px 22px;
+    box-shadow: 0 5px 14px #32231208;
+}
+
+.faq-list summary {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 19px;
+    cursor: pointer;
+    color: #1b1813;
+}
+
+.faq-list details p {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   CONTACT AND CONSULTATION FORMS
+========================================= */
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.contact-form {
+    background: #fff9ef;
+    border: 1px solid var(--border-gold);
+    padding: 30px;
+    box-shadow: 0 14px 35px #392a1712;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    color: #373027;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d8c7ad;
+    background: #fffdf9;
+    color: #25211b;
+    border-radius: 2px;
+    margin-bottom: 17px;
+    font: 14px 'DM Sans', Arial, sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #c99d5055;
+    border-color: #b9873a;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.form-message {
+    margin: 14px 0 0;
+    color: #76511d;
+    font-size: 13px;
+}
+
+.contact-detail {
+    border-top: 1px solid var(--border-gold);
+    padding: 15px 0;
+}
+
+.contact-detail span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #a16d25;
+}
+
+.contact-detail p {
+    margin: 3px 0 0;
+}
+
+.notice {
+    padding: 14px 16px;
+    background: #e8dac4;
+    border-left: 3px solid var(--gold);
+    font-size: 13px;
+    color: #5c5143;
+    margin-top: 24px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #10100f;
+    color: #f5eee3;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 50px;
+    padding-top: 42px;
+    padding-bottom: 36px;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-brand span {
+    display: block;
+    font: 11px 'DM Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    color: var(--gold-light);
+}
+
+.footer-top p {
+    font-size: 13px;
+    color: #bdb5a9;
+    max-width: 320px;
+    margin-top: 12px;
+}
+
+.footer-top h3 {
+    font: 700 16px 'Playfair Display', Georgia, serif;
+    color: var(--gold-light);
+    margin: 0 0 12px;
+}
+
+.footer-top > div > a:not(.footer-brand) {
+    display: block;
+    font-size: 13px;
+    color: #d4ccc0;
+    margin: 7px 0;
+}
+
+.footer-top a:hover {
+    color: var(--gold-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid #c99d5066;
+    padding: 13px 0;
+    color: #c8c0b4;
+    font-size: 11px;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1199px) {
+    .practice-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .practice-card {
+        min-height: 240px;
+    }
+
+    .hero-side-note {
+        right: 30px;
+    }
+
+    .site-nav .navbar-nav {
+        gap: 0;
+    }
+
+    .site-nav .nav-link {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .site-nav .container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .site-nav .navbar-collapse {
+        flex-basis: 100%;
+    }
+
+    .site-nav .navbar-nav {
+        align-items: stretch !important;
+        padding: 10px 0;
+    }
+
+    .site-nav .nav-link {
+        padding: 10px 4px !important;
+        border-bottom: 1px solid #ffffff14;
+    }
+
+    .site-nav .nav-link::after {
+        display: none;
+    }
+
+    .site-nav .btn-gold {
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .hero-side-note {
+        display: none;
+    }
+
+    .hero-section {
+        background-position: 62% center;
+    }
+
+    .hero-content {
+        min-height: 390px;
+    }
+
+    .split-layout,
+    .form-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .practice-detail-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 767.98px) {
+    .brand-emblem {
+        width: 45px;
+        height: 45px;
+        font-size: 34px;
+    }
+
+    .brand-name {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .brand-name small {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+
+    .hero-content {
+        min-height: 420px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .hero-section {
+        background-position: 68% center;
+    }
+
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-lead {
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-pad {
+        padding: 45px 0;
+    }
+
+    .practice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .practice-card {
+        padding: 15px 10px;
+    }
+
+    .practice-card h3 {
+        font-size: 15px;
+    }
+
+    .practice-card p {
+        min-height: 75px;
+    }
+
+    .three-grid,
+    .practice-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .conversation-inner {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .conversation-inner > div:nth-child(2) {
+        flex: 1;
+        min-width: 220px;
+    }
+
+    .conversation-inner h2 {
+        font-size: 21px;
+    }
+
+    .conversation-inner .btn {
+        margin-left: 50px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .footer-top > div:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+    }
+
+    .page-hero {
+        padding: 48px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 38px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-card p {
+        min-height: auto;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top > div:first-child {
+        grid-column: auto;
+    }
+}
+
+/* Accessibility: respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* ===== COGHLAN NAVIGATION FIX ===== */
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #10100f !important;
+    border-bottom: 2px solid #c99d50;
+    z-index: 1050;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.site-nav > .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+}
+
+.site-nav .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.site-nav .brand-lockup img {
+    display: block;
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border: 1px solid #c99d50;
+    border-radius: 3px;
+}
+
+.site-nav .brand-name {
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.1;
+}
+
+.site-nav .brand-name small {
+    display: block;
+    margin-top: 5px;
+    color: #e4c17e;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.site-nav .navbar-collapse {
+    flex-grow: 1;
+}
+
+.site-nav .navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: auto;
+}
+
+.site-nav .nav-link {
+    position: relative;
+    display: block;
+    padding: 12px 10px !important;
+    color: #f8f3ea !important;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active {
+    color: #e4c17e !important;
+}
+
+.site-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    left: 10px;
+    height: 2px;
+    background: #c99d50;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.site-nav .nav-link:hover::after,
+.site-nav .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.site-nav .navbar-toggler {
+    padding: 8px 10px;
+    border: 1px solid #c99d50;
+    background: #1b1915;
+}
+
+.site-nav .navbar-toggler-icon {
+    filter: none;
+}
+
+.site-nav .consultation-btn {
+    display: inline-block;
+    padding: 12px 19px;
+    color: #15120d !important;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Mobile and tablet navigation */
+@media (max-width: 1199.98px) {
+    .site-nav > .container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .site-nav .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .site-nav .navbar-nav {
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .site-nav .nav-link {
+        padding: 12px 5px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .site-nav .nav-link::after {
+        display: none;
+    }
+
+    .site-nav .nav-item:last-child {
+        margin: 12px 0 0 !important;
+    }
+
+    .site-nav .consultation-btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-nav .brand-lockup {
+        gap: 9px;
+        margin-right: 8px;
+    }
+
+    .site-nav .brand-lockup img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .site-nav .brand-name {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .site-nav .brand-name small {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+}
